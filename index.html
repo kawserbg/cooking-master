@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking Master</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header id="header-area">
+        <div class="top-header">
+            <div class="logo">Cooking Master</div>
+            <nav class="nav-area">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Recipes</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- Code for single meal -->
+        <div id="single-meal-item"></div>
+
+        <!-- Search area for meal -->
+        <div class="search-box">
+            <input type="text" name="" id="search-meal" placeholder="Search for Meal...">
+            <button id="search">Search</button>
+        </div>
+
+        <!-- Error Handling -->
+        <p id="error"></p>
+
+        <!-- Display Search result -->
+        <div class="container">
+            <div id="meals-list"></div>
+        </div>
+
+
+
+    </main>
+
+    <!-- Main Javascript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
