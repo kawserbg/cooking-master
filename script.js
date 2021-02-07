@@ -42,13 +42,13 @@ const singleMeal = mealName => {
 search.addEventListener('click', () => {
 
     const mealList = document.getElementById('meals-list');
-    const error = document.getElementById('error');
+    const errorTxt = document.getElementById('error');
 
     singleMealItem.innerHTML = "";
 
     if (searchMealName.value == '') {
         mealList.innerHTML = "";
-        error.innerText = 'Search field must not be empty.';
+        errorTxt.innerText = 'Search field must not be empty.';
     } else {
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchMealName.value}`)
             .then(response => response.json())
@@ -56,7 +56,7 @@ search.addEventListener('click', () => {
                 showMealsList(data);
             })
             .catch(error => {
-                error.innerText = "Sorry! We did not find your recipe.";
+                errorTxt.innerText = "Sorry! We did not find your recipe.";
             })
 
         const showMealsList = mealResult => {
@@ -75,7 +75,7 @@ search.addEventListener('click', () => {
                 mealList.appendChild(div);
             });
         }
-        
+
         searchMealName.value = "";
     }
 })
